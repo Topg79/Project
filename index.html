@@ -24,6 +24,34 @@
           <li><a href="#">분양정보</a></li>
           <li><a href="#">공지사항</a></li>
         </ul>
+        <ul id="gnb">
+          <li><a href="#">contact</a></li>
+          <li><a href="#">help</a></li>
+          <li><a href="#">login</a></li>
+          <li><a href="#">join</a></li>
+          <li><a href="#">sitemap</a></li>
+        </ul>
+      </nav>
+
+      <!-- 모르지만 일단 넣는다 -->
+      <a href="#" class="btnCall">
+        <span>메뉴호출</span>
+      </a>
+
+      <!-- 모바일 사이즈 조정시 사용 -->
+      <nav class="menuMo">
+        <h1>
+          <a href="#">샤이닝분양</a>
+          <span>SHINING PARCEL OUT</span>
+        </h1>
+
+        <ul id="gnbMo">
+          <li><a href="#">사업소개</a></li>
+          <li><a href="#">입지환경</a></li>
+          <li><a href="#">단지정보</a></li>
+          <li><a href="#">분양정보</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -36,54 +64,65 @@
       <span>샤이닝이 삶의 가치를 높여드리겠습니다</span>
       <a href="#">자세히보기</a>
     </div>
-
   </figure>
 
+  <!-- 여기에 slide loog를 이용해서 사진이 바뀌는 것을 넣고 싶은데..
+  복습이 안된 상태이므로 일단 스킵 -->
+
   <section id="advantage">
-    <div class="wrap">
-      <article>
-        <h1>Shining Tower</h1>
-        <p>더 나은 내일을 위해</p>
-        <img src="img/main.jpg" alt="샤이닝분양 메인 조경도">
-      </article>
-      <article>
-        <p>샤이닝분양은 다년간의 경험을 바탕으로 2000년부터 건축디자인과 시공 및 분양까지 서비스하고 있으며, 다양한 용도를 고려하여 상가 및 오피스텔, 주거전용 구역을 구분하여 분양하고 있습니다.
-          앞서나가는 기업으로 성장하는 샤이닝분양 컨설팅에서 새로운 투자 가치를 경험해 보시기 바랍니다.
+    <div class="inner">
+      <!-- 따라서 쓰긴 했느데, div를 2개나 쓸필요가 있을까? -->
+      <div class="wrap">
+        <!-- 첫번째 아티클 -->
+        <article>
+          <h1>SHINING TOWER</h1>
+          <p>더 나은 내일을 위해</p>
+          <img src="img/main.jpg" alt="샤이닝분양 메인 조경도">
+        </article>
+        <!-- 두번째 아티클 -->
+        <article>
+          <p>샤이닝분양은 다년간의 경험을 바탕으로 2000년부터 건축디자인과 시공 및 분양까지 서비스하고 있으며, 다양한 용도를 고려하여 상가 및 오피스텔, 주거전용 구역을 구분하여 분양하고 있습니다.
+            앞서나가는 기업으로 성장하는 샤이닝분양 컨설팅에서 새로운 투자 가치를 경험해 보시기 바랍니다.
+          </p>
           <a href="#">자세히보기</a>
-        </p>
-      </article>
-      <article>
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-plane-up"></i>
-              <span>신속한 교통망</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-money-bill-trend-up"></i>
-              <span>경제중심도시</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-tree-city"></i>
-              <span>명품힐링단지</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-school-flag"></i>
-              <span>우수한 교육인프라</span>
-            </a>
-          </li>
-        </ul>
-      </article>
+        </article>
+        <!-- 세번째 아티클 -->
+        <!-- 아래 아티클에 뭔가 효과를 넣고 싶은데! 뭘할지 모르겠네! -->
+        <!-- 원본에 2x2 테이블로  되어 있는데 ul로 해도 되나? div로 해야하지 않을까? 모르겠다. 일단 패스 -->
+        <article>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-plane-up"></i>
+                <span>신속한 교통망</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                <span>경제중심도시</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-tree-city"></i>
+                <span>명품힐링단지</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-school-flag"></i>
+                <span>우수한 교육인프라</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="detail">
+  <!-- 여기도 분명 효과를 넣어야 한다. 무얼할지는 모르겠지만은!-->
+  <section id="future">
     <div class="inner">
       <h1>SHINING PREMIUM</h1>
       <p>친환경 미래형 아파트</p>
@@ -106,11 +145,21 @@
     </div>
   </section>
 
-  <footer>
-
+  <footer id="footer">
+    <div class="inner">
+      <h1>샤이닝분양</h1>
+      <address>
+        주소: 경기도 부천시 원미구 중동 1152 상록센트럴타워 303호 샤이닝 <br>
+        개인정보관리 책임자 : 대표 김철수
+        Tel : 031-123-4567 Fax : 031-123-4568
+      </address>
+      <!-- 고객센터 번호는 잘보이게 한다 -->
+      <div class="service">
+        <span>고객센터</span>
+        <span>1544-0777</span>
+      </div>
+    </div>
   </footer>
-
-
 </body>
 
 </html>
