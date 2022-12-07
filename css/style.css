@@ -28,7 +28,7 @@ a {
 
 #header {
   width: 100%;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #ddd;
 }
 #header .inner {
   width: 1180px;
@@ -180,6 +180,28 @@ a {
   height: 100%;
   object-fit: cover;
   opacity: 1;
+}
+#visual .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+#advantage {
+  width: 100%;
+  padding: 200px 0;
+  background: pink;
+}
+#advantage .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+#advantage .inner h1 {
+  font: bold 24px/1 "arial";
+  color: #555;
+  text-align: right;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -38,7 +38,7 @@ a {
 //header
 #header {
 	width: 100%;
-	border-bottom: 1px solid red; //#ddd로 색상 바꾸기
+	border-bottom: 1px solid #ddd;
 	.inner {
 		width: 1180px;
 		height: 120px;
@@ -194,7 +194,7 @@ a {
 } //end of header
 
 //visual
-//하단에 가로 스크롤이 생기는 문제는 해결 못함
+//(질문)하단에 가로 스크롤이 생기는 문제는 해결 못함
 //영상이 110M 이상이 git에 안올라가기 때문에(?) 고화질은 업로가 불가
 //메시지가 나서서 못올림
 //영상 화질을 많이 줄인 상태임. 다른 사람들은 무거운 것도 많이
@@ -210,4 +210,29 @@ a {
 		object-fit: cover;
 		opacity: 1;
 	}
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: absolute;
+	}
 } //end of visual
+
+//advantage
+#advantage {
+	width: 100%;
+	padding: 200px 0;
+	background: pink; //#eee로 색상 변경
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+		//(질문)h1의 글자도 1개씩 쪼개서 색상을 달리하는 방법은 없을까?
+		//SHING TOWER에서 S,T를 예제처럼 주황색으로 하고 싶음
+		h1 {
+			font: bold 24px/1 "arial";
+			color: #555;
+			text-align: right;
+			margin-bottom: 30px;
+		}
+	}
+}
