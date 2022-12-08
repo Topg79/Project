@@ -217,28 +217,36 @@ a {
 		width: 1180px;
 		margin: 0 auto;
 		position: absolute;
-		top: 30%;
-		left: 30%;
+		top: 40%;
+		left: 19%;
 		//transform: translate(-50%, -50%);
 
 		h1 {
-			font: normal 100px/1 "arial";
+			font: normal 20px/1 "arial";
 			color: #fff;
 			margin-bottom: 20px;
 		} //end of h1
 
 		p {
-			font: 16px/1.4 "arial";
+			font: 30px/1.4 "arial";
 			color: #fff;
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 		} //end of p
+
+		h2 {
+			font: normal 15px/1 "arial";
+			color: #fff;
+			margin-bottom: 20px;
+		}
+
 		a {
 			display: block;
-			width: 400px;
-			height: 300px;
+			width: 100px;
+			height: 40px;
 			border: 1px solid #bbb;
-			font: bold 11px/30px "arial";
+			font: bold 13px/30px "arial";
 			color: #fff;
+			line-height: 40px;
 			text-align: center;
 			&:hover {
 				background: #fff;
