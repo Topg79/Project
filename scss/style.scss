@@ -282,9 +282,9 @@ a {
 				&:nth-of-type(1) {
 					width: 580px;
 					height: 620px;
-					background: yellow; //테스트용
+					background: #fff;
 					float: left;
-					margin-right: 20px;
+					margin-right: 10px;
 					padding: 20px 20px 0;
 					p {
 						font: 25px/1.4 "arial";
@@ -303,19 +303,39 @@ a {
 				&:nth-of-type(2) {
 					width: 580px;
 					height: 300px;
-					float: right;
-					margin-right: 20px;
+					margin-right: 10px;
 					background: blue; //테스트
+					float: left;
+					p {
+						font: 15px/1.4 "arial";
+						color: #888;
+						margin-bottom: 10px;
+						background-color: aquamarine;
+					} //end of p
+					a {
+						display: block;
+						width: 100px;
+						height: 40px;
+						border: 1px solid #bbb;
+						font: bold 13px/30px "arial";
+						color: #fff;
+						line-height: 40px;
+						text-align: center;
+						&:hover {
+							background: #fff;
+							color: #555;
+						}
+					} //end of a
 				} //end of nth-of-type(2)
 
-				&:nth-of-type(3) {
-					width: 580px;
-					height: 300px;
-					float: right;
-					margin-top: 20px;
-					position: relative;
-					background: pink; //테스트
-				} //end of nth-of-type(2)
+				// &:nth-of-type(3) {
+				// 	width: 580px;
+				// 	height: 300px;
+				// 	float: left;
+				// 	margin-top: 20px;
+				// 	position: relative;
+				// 	background: pink; //테스트
+				// } //end of nth-of-type(2)
 				// //클론 코딩 -모르겠음
 				// &::after {
 				// 	content: "";
