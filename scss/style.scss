@@ -272,8 +272,9 @@ a {
 			//SHING TOWER에서 S,T를 예제처럼 주황색으로 하고 싶음
 			font: bold 24px/1 "arial";
 			color: #555;
+			padding: 10px 10px 0;
 			text-align: center;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		} //end of h1
 
 		.wrap {
@@ -286,15 +287,16 @@ a {
 					float: left;
 					margin-right: 10px;
 					padding: 20px 20px 0;
+					overflow: hidden;
 					p {
 						font: 25px/1.4 "arial";
 						color: #555;
-						margin-bottom: 30px;
+						margin-bottom: 20px;
 						text-align: right;
 					} //end of p
 					img {
-						width: 80%;
-						height: 80%;
+						width: 85%;
+						height: 85%;
 						object-fit: cover;
 						float: right;
 					} //emd pf img
@@ -305,11 +307,13 @@ a {
 					height: 300px;
 					margin-right: 10px;
 					background: blue; //테스트
+					padding: 30px 20px 0;
 					float: left;
 					p {
 						font: 15px/1.4 "arial";
 						color: #888;
-						margin-bottom: 10px;
+						margin-bottom: 20px;
+						text-align: left;
 						background-color: aquamarine;
 					} //end of p
 					a {
@@ -328,14 +332,15 @@ a {
 					} //end of a
 				} //end of nth-of-type(2)
 
-				// &:nth-of-type(3) {
-				// 	width: 580px;
-				// 	height: 300px;
-				// 	float: left;
-				// 	margin-top: 20px;
-				// 	position: relative;
-				// 	background: pink; //테스트
-				// } //end of nth-of-type(2)
+				&:nth-of-type(3) {
+					width: 580px;
+					height: 300px;
+					float: left;
+					margin-top: 10px;
+					float: left;
+					background: pink; //테스트
+					// 	position: relative;
+				} //end of nth-of-type(2)
 				// //클론 코딩 -모르겠음
 				// &::after {
 				// 	content: "";
