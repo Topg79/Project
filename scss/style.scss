@@ -304,8 +304,9 @@ a {
 
 				&:nth-of-type(2) {
 					width: 580px;
-					height: 300px;
+					height: 280px;
 					margin-right: 10px;
+					margin-bottom: 10px;
 					background: blue; //테스트
 					padding: 30px 20px 0;
 					float: left;
@@ -334,12 +335,15 @@ a {
 
 				&:nth-of-type(3) {
 					width: 580px;
-					height: 300px;
-					float: left;
-					margin-top: 10px;
+					height: 280px;
 					float: left;
 					background: pink; //테스트
-					// 	position: relative;
+					margin: 10px 0;
+					display: grid;
+					grid-template-columns: 290px 140px;
+					grid-row: auto auto;
+					grid-column-gap: 10px;
+					grid-row-gap: 10px;
 				} //end of nth-of-type(2)
 				// //클론 코딩 -모르겠음
 				// &::after {
