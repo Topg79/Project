@@ -340,10 +340,21 @@ a {
 					background: pink; //테스트
 					margin: 10px 0;
 					display: grid;
-					grid-template-columns: 290px 140px;
-					grid-row: auto auto;
+					grid-template-columns: 140px 140px; //columns - 열
+					grid-row: auto auto; //row - 행
 					grid-column-gap: 10px;
 					grid-row-gap: 10px;
+					.box {
+						background-color: #333;
+						padding: 20px;
+						border-radius: 10px;
+						color: #fff;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 40px;
+						font-family: sans-serif;
+					}
 				} //end of nth-of-type(2)
 				// //클론 코딩 -모르겠음
 				// &::after {

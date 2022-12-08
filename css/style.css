@@ -299,10 +299,21 @@ a {
   background: pink;
   margin: 10px 0;
   display: grid;
-  grid-template-columns: 290px 140px;
+  grid-template-columns: 140px 140px;
   grid-row: auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+}
+#advantage .inner .wrap article:nth-of-type(3) .box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
