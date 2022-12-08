@@ -299,21 +299,26 @@ a {
   background: pink;
   margin: 10px 0;
   display: grid;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: 250px 250px;
   grid-row: auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 #advantage .inner .wrap article:nth-of-type(3) .box {
-  background-color: #333;
+  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#advantage .inner .wrap article:nth-of-type(3) .box > a {
   font-size: 40px;
   font-family: sans-serif;
+}
+#advantage .inner .wrap article:nth-of-type(3) .box > span {
+  font: 15px/1.4 "arial";
 }
 
 /*# sourceMappingURL=style.css.map */
