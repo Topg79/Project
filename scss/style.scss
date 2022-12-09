@@ -469,3 +469,40 @@ a {
 		} //end of wrap
 	} //end of inner
 } //end of future
+
+//footer
+#footer {
+	width: 100%;
+	padding: 100px 0;
+	background: #444;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		h1 {
+			font: bold 24px/1 "arial";
+			color: #fff;
+			float: left;
+		} //end of h1
+		address {
+			float: left;
+			width: 100%;
+			font: 14px/1.7 "arial";
+			color: #eee;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #888;
+		} //end of address
+		p {
+			float: left;
+			width: 100%;
+			font: 12px/1 "arial";
+			color: #777;
+		}
+	} //end of inner
+} //end of footer
