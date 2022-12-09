@@ -404,4 +404,68 @@ a {
 
 // 2X2 배열 구현을 혼자 못하기 때문에, 일렬로 일단 한다
 #future {
-}
+	width: 100%;
+	padding: 200px 0;
+	background: #eee;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative; //나는 현재 position을 제대로 모르는 상태임
+		text-align: center;
+		h1 {
+			font: bold 18px/1 "arial";
+			color: #555;
+			margin-bottom: 20px;
+		} //end of h1
+		p {
+			font: 25px/1.4 "arial";
+			color: #555;
+			margin-bottom: 30px;
+		} //end of p
+		.wrap {
+			width: 100%;
+			article {
+				float: left;
+				width: 280px;
+				margin-right: 20px;
+				&:last-of-type {
+					margin-right: 0;
+				} //end of last-of-type
+				.pic {
+					width: 100%;
+					height: 120px;
+					overflow: hidden;
+					margin-bottom: 10px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						transition: 0.5s;
+					} //end of img
+					&:hover {
+						img {
+							transform: scale(1.2);
+						}
+					} //end of hover
+				} //end of pic
+				//여기서 에러가 생김 - 해결 못함
+				a {
+					display: block;
+					width: 100px;
+					height: 40px;
+					border: 1px solid #bbb;
+					background-color: #555;
+					font: bold 13px/30px "arial";
+					color: #fff;
+					line-height: 40px;
+					text-align: center;
+					&:hover {
+						background: #fff;
+						color: #555;
+					}
+				} //end of a
+			} //end of article
+		} //end of wrap
+	} //end of inner
+} //end of future
