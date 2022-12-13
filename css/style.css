@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -344,54 +345,49 @@ a {
   clear: both;
 }
 
-#future {
+#future_apt {
   width: 100%;
   padding: 200px 0;
   background: #eee;
 }
-#future .inner {
+#future_apt .inner {
   width: 1180px;
   margin: 0 auto;
   position: relative;
-  text-align: center;
 }
-#future .inner h1 {
-  font: bold 18px/1 "arial";
+#future_apt .inner h1 {
+  font: bold 20px/1 "arial";
   color: #555;
+  text-align: center;
   margin-bottom: 20px;
 }
-#future .inner p {
-  font: 25px/1.4 "arial";
+#future_apt .inner p {
+  font: 25px/1.4 "맑은 고딕";
   color: #555;
   margin-bottom: 30px;
+  text-align: center;
 }
-#future .inner .wrap {
+#future_apt .inner .wrap {
   width: 100%;
 }
-#future .inner .wrap article {
-  float: left;
-  width: 280px;
-  margin-right: 20px;
+#future_apt .inner .wrap article {
+  width: 580px;
+  height: 300px;
 }
-#future .inner .wrap article:last-of-type {
-  margin-right: 0;
-}
-#future .inner .wrap article .pic {
+#future_apt .inner .wrap article .pic {
   width: 100%;
-  height: 120px;
+  height: 200px;
   overflow: hidden;
-  margin-bottom: 10px;
 }
-#future .inner .wrap article .pic img {
-  width: 100%;
-  height: 100%;
+#future_apt .inner .wrap article .pic img {
   object-fit: cover;
   transition: 0.5s;
 }
-#future .inner .wrap article .pic:hover img {
+#future_apt .inner .wrap article .pic:hover img {
   transform: scale(1.2);
 }
-#future .inner .wrap article a {
+#future_apt .inner .wrap article a {
+  margin-top: 5px;
   display: block;
   width: 100px;
   height: 40px;
@@ -402,9 +398,28 @@ a {
   line-height: 40px;
   text-align: center;
 }
-#future .inner .wrap article a:hover {
+#future_apt .inner .wrap article a:hover {
   background: #fff;
   color: #555;
+}
+#future_apt .inner .wrap article:nth-of-type(1) {
+  float: left;
+  margin-right: 20px;
+}
+#future_apt .inner .wrap article:nth-of-type(2) {
+  float: right;
+}
+#future_apt .inner .wrap article:nth-of-type(3) {
+  float: left;
+  margin-right: 20px;
+}
+#future_apt .inner .wrap article:nth-of-type(4) {
+  float: right;
+}
+#future_apt .inner::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 #footer {
@@ -416,7 +431,7 @@ a {
   width: 1180px;
   margin: 0 auto;
 }
-#footer .inner:after {
+#footer .inner::after {
   content: "";
   display: block;
   clear: both;
@@ -424,35 +439,33 @@ a {
 #footer .inner h1 {
   font: bold 24px/1 "arial";
   color: #fff;
+  padding-top: 5px;
   float: left;
 }
-#footer .inner address {
+#footer .inner .detail_address {
   float: left;
-  width: 100%;
+  margin-left: 70px;
+}
+#footer .inner .detail_address address {
   font: 14px/1.7 "arial";
   color: #eee;
   margin-bottom: 20px;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #888;
 }
-#footer .inner p {
-  float: left;
-  width: 100%;
+#footer .inner .detail_address p {
   font: 12px/1 "arial";
-  color: #777;
+  color: #eee;
 }
 #footer .inner .service {
   float: right;
-  margin-top: 20px;
-  margin-left: 20px;
 }
-#footer .inner .service span:nth-of-type(1) {
-  font: bold 15px/1 "arial";
+#footer .inner .service p:nth-of-type(1) {
+  font: bold 20px/1 "arial";
   color: orange;
+  margin-bottom: 15px;
 }
-#footer .inner .service span:nth-of-type(2) {
-  font: bold 20px/1.5 "arial";
+#footer .inner .service p:nth-of-type(2) {
+  font: bold 25px/1 "Roboto";
+  letter-spacing: 7px;
   color: #fff;
 }
 

@@ -393,7 +393,7 @@ a {
 			} //end of nth-of-type(2)
 		} //end of article
 
-		// 이것을 쓰는 정확한 위치를 모르겠네
+		// 이것을 지우면 future_apt와의 공간이 구분이 안된다
 		&::after {
 			content: "";
 			display: block;
@@ -402,44 +402,40 @@ a {
 	} //end of inner
 } //end of advantage
 
-// 2X2 배열 구현을 혼자 못하기 때문에, 일렬로 일단 한다
-#future {
+#future_apt {
 	width: 100%;
 	padding: 200px 0;
 	background: #eee;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		position: relative; //나는 현재 position을 제대로 모르는 상태임
-		text-align: center;
+		position: relative;
+
 		h1 {
-			font: bold 18px/1 "arial";
+			font: bold 20px/1 "arial";
 			color: #555;
+			text-align: center;
 			margin-bottom: 20px;
 		} //end of h1
 		p {
-			font: 25px/1.4 "arial";
+			font: 25px/1.4 "맑은 고딕";
 			color: #555;
 			margin-bottom: 30px;
+			text-align: center;
 		} //end of p
+
 		.wrap {
 			width: 100%;
+
 			article {
-				float: left;
-				width: 280px;
-				margin-right: 20px;
-				&:last-of-type {
-					margin-right: 0;
-				} //end of last-of-type
+				width: 580px;
+				height: 300px;
+
 				.pic {
 					width: 100%;
-					height: 120px;
+					height: 200px;
 					overflow: hidden;
-					margin-bottom: 10px;
-
 					img {
-						width: 100%;
-						height: 100%;
 						object-fit: cover;
 						transition: 0.5s;
 					} //end of img
@@ -449,8 +445,9 @@ a {
 						}
 					} //end of hover
 				} //end of pic
-				//여기서 에러가 생김 - 해결 못함
+
 				a {
+					margin-top: 5px;
 					display: block;
 					width: 100px;
 					height: 40px;
@@ -465,8 +462,31 @@ a {
 						color: #555;
 					}
 				} //end of a
+
+				&:nth-of-type(1) {
+					float: left;
+					margin-right: 20px;
+				}
+
+				&:nth-of-type(2) {
+					float: right;
+				}
+
+				&:nth-of-type(3) {
+					float: left;
+					margin-right: 20px;
+				}
+
+				&:nth-of-type(4) {
+					float: right;
+				}
 			} //end of article
 		} //end of wrap
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		} //end of after
 	} //end of inner
 } //end of future
 
@@ -478,7 +498,8 @@ a {
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		&:after {
+		// 아직도 after는 모르겠음
+		&::after {
 			content: "";
 			display: block;
 			clear: both;
@@ -486,36 +507,39 @@ a {
 		h1 {
 			font: bold 24px/1 "arial";
 			color: #fff;
+			padding-top: 5px;
 			float: left;
 		} //end of h1
-		address {
+		.detail_address {
 			float: left;
-			width: 100%;
-			font: 14px/1.7 "arial";
-			color: #eee;
-			margin-bottom: 20px;
-			margin-top: 20px;
-			padding-top: 20px;
-			border-top: 1px solid #888;
+			margin-left: 70px;
+			address {
+				font: 14px/1.7 "arial";
+				color: #eee;
+				margin-bottom: 20px;
+				// margin-top: 20px;
+				// padding-top: 20px;
+				// border-top: 1px solid #888;
+			}
+			p {
+				font: 12px/1 "arial";
+				color: #eee;
+			}
 		} //end of address
-		p {
-			float: left;
-			width: 100%;
-			font: 12px/1 "arial";
-			color: #777;
-		}
-		//위로 올려야 하는데...
+
 		.service {
+			// margin-left: 70px;
 			float: right;
-			margin-top: 20px;
-			margin-left: 20px;
-			span {
+			p {
 				&:nth-of-type(1) {
-					font: bold 15px/1 "arial";
+					font: bold 20px/1 "arial";
 					color: orange;
+					margin-bottom: 15px;
+					// display: inline-block;
 				}
 				&:nth-of-type(2) {
-					font: bold 20px/1.5 "arial";
+					font: bold 25px/1 "Roboto";
+					letter-spacing: 7px;
 					color: #fff;
 				}
 			}
