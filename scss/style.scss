@@ -1,9 +1,16 @@
 // 초기 리셋
 @charset 'utf-8';
 
-//이것은 어디다 쓰는 것이지?
-// $tablet: 1179px;
-// $mobile: 539px;
+$tablet: 1179px;
+$mobile: 539px;
+
+@import "sub_layout.scss";
+@import "biz_introduction.scss";
+@import "complex_info.scss";
+@import "environment.scss";
+@import "join.scss";
+@import "notice.scss";
+@import "sales_info.scss";
 
 * {
 	margin: 0px;
@@ -194,11 +201,6 @@ a {
 } //end of header
 
 //visual
-//(질문)하단에 가로 스크롤이 생기는 문제는 해결 못함
-//영상이 110M 이상이 git에 안올라가기 때문에(?) 고화질은 업로가 불가
-//메시지가 나서서 못올림
-//영상 화질을 많이 줄인 상태임. 다른 사람들은 무거운 것도 많이
-//올리는것 같은데 왜 이러는지 알수가 없음.
 #visual {
 	width: 100%;
 	//header의 120px + borderbotttom 1px을 뺀다
