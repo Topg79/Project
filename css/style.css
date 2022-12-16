@@ -228,6 +228,66 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: #eee;
+}
+body #wrap {
+  width: 100%;
+  padding: 50px;
+  overflow: hidden;
+}
+body #wrap #list {
+  opacity: 0;
+  transform: trasnlateY(100px);
+  transition: 1s;
+}
+body #wrap #list.on {
+  opacity: 1;
+  transform: trasnlateY(0px);
+}
+body #wrap #list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #wrap #list li {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+body #wrap #list li div {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rbga(0, 0, 0, 0.1);
+}
+body #wrap #list li div a img {
+  width: 100%;
+}
+body #wrap #list li div p {
+  font: 12px/1 "arial";
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .hidden {
   position: absolute;
   top: -99999999px;
