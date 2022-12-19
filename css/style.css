@@ -660,20 +660,25 @@ a {
   transform: scale(1.2);
 }
 #future_apt .inner .wrap article a {
+  display: inline-block;
+  text-align: center;
   margin-top: 5px;
-  display: block;
-  width: 100px;
-  height: 40px;
+  width: 80px;
+  height: 30px;
   border: 1px solid #bbb;
   background-color: #555;
-  font: bold 13px/30px "arial";
+  font: bold 10px/30px "arial";
   color: #fff;
-  line-height: 40px;
-  text-align: center;
+  display: inline-block;
 }
 #future_apt .inner .wrap article a:hover {
   background: #fff;
   color: #555;
+}
+#future_apt .inner .wrap article a::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #future_apt .inner .wrap article:nth-of-type(1) {
   float: left;
@@ -688,11 +693,6 @@ a {
 }
 #future_apt .inner .wrap article:nth-of-type(4) {
   float: right;
-}
-#future_apt .inner::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 #footer {
@@ -740,6 +740,75 @@ a {
   font: bold 25px/1 "Roboto";
   letter-spacing: 7px;
   color: #fff;
+}
+
+@media screen and (max-width: 1179px) {
+  #header .inner {
+    width: 100%;
+    height: 100px;
+  }
+  #header .inner > h1 {
+    left: 20px;
+  }
+  #header .inner .menuWeb {
+    display: none;
+  }
+  #header .inner .btnCall {
+    display: block;
+  }
+  #header .inner .menuMo {
+    display: block;
+  }
+  #visual {
+    height: calc(100vh - 101px);
+    background: url(../img/visual1.jpg) no-repeat center/cover;
+  }
+  #visual video {
+    display: none;
+  }
+  #visual .inner {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  #advantage {
+    padding: 50px 30px;
+  }
+  #advantage .inner {
+    width: 100%;
+  }
+  #advantage .inner .inner {
+    width: 49%;
+    margin-right: 2%;
+  }
+  #future_apt {
+    padding: 50px 30px;
+  }
+  #future_apt .inner {
+    width: 100%;
+    margin-right: 2%;
+  }
+  #future_apt .inner .wrap article a {
+    font: bold 10px/20px "arial";
+    line-height: 30px;
+  }
+  #future_apt .inner .wrap article:nth-of-type(1) {
+    float: left;
+    width: 49%;
+    margin-right: 2px;
+  }
+  #future_apt .inner .wrap article:nth-of-type(2) {
+    float: right;
+    width: 49%;
+  }
+  #future_apt .inner .wrap article:nth-of-type(3) {
+    float: left;
+    width: 49%;
+    margin-right: 2px;
+  }
+  #future_apt .inner .wrap article:nth-of-type(4) {
+    float: right;
+    width: 49%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
