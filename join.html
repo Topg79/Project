@@ -7,11 +7,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원가입</title>
+  <title>회원가입페이지</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/853a9be9ed.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <!-- <script defer src="js/main.js"></script> -->
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -36,7 +36,6 @@
         </ul>
       </nav>
 
-      <!-- 모르지만 일단 넣는다 -->
       <a href="#" class="btnCall">
         <span>메뉴호출</span>
       </a>
@@ -60,10 +59,60 @@
   </header>
 
   <section class="content join">
-    <div class="sub_visual"></div>
+    <div class="sub_visual">
+    </div>
     <div class="inner">
       <h1>회원가입</h1>
-      <!-- 컨텐츠가 들어가는 부분 -->
+      <form action="location.html">
+        <fieldset>
+          <legend class="hidden">회원가입양식폼</legend>
+          <h2><label for="terms">Terms & Policy</label></h2>
+          <textarea name="terms" id="terms" cols="30" rows="10">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque at minima esse nisi, maxime laboriosam? Rerum, sint. Unde eligendi placeat, temporibus ipsum quam ut pariatur molestiae commodi, corrupti explicabo blanditiis ex aut dicta dignissimos aspernatur repellendus. Rem, placeat. Minus maxime cumque adipisci id similique quibusdam repellat temporibus distinctio voluptatum autem saepe provident aliquam quis ullam cupiditate, itaque sed reiciendis ex sapiente nam quisquam dignissimos. Ratione dolore expedita, magnam, repellat numquam illum accusantium aut ex consectetur, voluptatum vitae? Eveniet tenetur inventore voluptatum reprehenderit aut voluptatibus quae perspiciatis, libero eos maxime consectetur quos natus dolore vel? Saepe a officia qui reiciendis Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto tempora dolores quidem aliquid porro saepe a aut illo illum, nesciunt, quasi vel assumenda cumque, quibusdam impedit veritatis quos ex doloremque?
+          </textarea>
+          <div class="agreement">
+            <input type="checkbox" name="agreement" id="agree">
+            <label for="agree">약관에 동의합니다</label>
+          </div>
+
+          <h2>MEMBER INFORMATION</h2>
+          <table>
+            <caption class="hidden">회원정보 입력양식 테이블</caption>
+
+            <tr>
+              <th scope="row">
+                <label for="id">USER ID</label>
+              </th>
+              <td>
+                <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요" required>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row"><label for="pwd">PASSWORD</label></th>
+              <td><input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력해주세요"></td>
+            </tr>
+
+            <tr>
+              <th scope="row"><label for="pwd2">RE PASSWORD</label></th>
+              <td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해주세요"></td>
+            </tr>
+
+            <tr>
+              <th scope="row">HOBBY</th>
+              <td>
+                <label for="game">
+                  <input type="checkbox" name="hobby" id="game" value="game">
+                  GAME
+                </label>
+                <label for="music">
+                  <input type="checkbox" name="hobby" id="music" value="music">
+                </label>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
     </div>
   </section>
 

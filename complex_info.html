@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/853a9be9ed.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <!-- <script defer src="js/main.js"></script> -->
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a703a1d1d4966263b4dc2278318c20d"></script>
+  <script defer src="js/location.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -36,7 +40,6 @@
         </ul>
       </nav>
 
-      <!-- 모르지만 일단 넣는다 -->
       <a href="#" class="btnCall">
         <span>메뉴호출</span>
       </a>
@@ -62,8 +65,9 @@
   <section class="content complex_info">
     <div class="sub_visual"></div>
     <div class="inner">
-      <h1>단지정보</h1>
-      <!-- 컨텐츠가 들어가는 부분 -->
+      <h1>단지정보_카카오맵</h1>
+      <div id="map"></div>
+    </div>
     </div>
   </section>
 

@@ -1,0 +1,10 @@
+.location {
+	width: 100%; //전체너비를 뜻하는 100%
+	.inner {
+		#map {
+			width: 100%; //여기map의 100% 1180
+			height: 500px;
+			border: 1px solid #000;
+		}
+	}
+}
