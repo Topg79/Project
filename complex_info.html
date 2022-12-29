@@ -1,4 +1,4 @@
-<!-- 단지정보 -->
+<!-- 단지정보_카카오맵 -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,6 +16,7 @@
   <script defer src="js/location.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
+  <script defer src="js/complex_info.js"></script>
 </head>
 
 <body>
@@ -67,6 +68,17 @@
     <div class="inner">
       <h1>단지정보_카카오맵</h1>
       <div id="map"></div>
+
+      <ul class="traffic">
+        <li><a href="#">교통정보 보기</a></li>
+        <li class="on"><a href="#">교통정보 끄기</a></li>
+      </ul>
+
+      <ul class="branch">
+        <li class="on" data-index="0"><a href="#">1단지</a></li>
+        <li data-index="1"><a href="#">2단지</a></li>
+        <li data-index="2"><a href="#">3단지</a></li>
+      </ul>
     </div>
     </div>
   </section>
