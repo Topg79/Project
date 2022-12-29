@@ -11,7 +11,7 @@
 			left: 0px;
 			bottom: 15px;
 			> a {
-				font: bold 24px/1 "arial";
+				font: bold 24px/1 'arial';
 				color: #444;
 			} //end of a
 		} //end of h1
@@ -27,7 +27,7 @@
 				a {
 					display: block;
 					padding: 14px 40px;
-					font: bold 15px/1 "arial";
+					font: bold 15px/1 'arial';
 					color: #777;
 					&:hover {
 						background: #555;
@@ -44,7 +44,7 @@
 				float: left;
 				margin-left: 20px;
 				a {
-					font: 12px/1 "arial";
+					font: 12px/1 'arial';
 					color: #999;
 				}
 			} //end of li
@@ -61,7 +61,7 @@
 		width: 20px;
 		height: 20px;
 		&::before {
-			content: "";
+			content: '';
 			display: block;
 			width: 100%;
 			height: 2px;
@@ -72,7 +72,7 @@
 			transition: top 0.5s 0s, transform 0.5s 0.5s;
 		}
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			width: 100%;
 			height: 2px;
@@ -130,7 +130,7 @@
 			border-bottom: 1px solid #666;
 			a {
 				display: block;
-				font: bold 24px/1 "arial";
+				font: bold 24px/1 'arial';
 				color: #fff;
 				text-align: center;
 				span {
@@ -146,7 +146,7 @@
 					width: 100%;
 					padding: 20px 0;
 					border-bottom: 1px solid aqua; //#444로 색상 바꾸기
-					font: bold 14px/1 "arial";
+					font: bold 14px/1 'arial';
 					color: #888;
 					text-align: center;
 				} //end of a
@@ -169,7 +169,7 @@
 		margin: 0 auto;
 		min-height: 500px;
 		h1 {
-			font: normal 50px/1 "arial";
+			font: normal 30px/1 'arial';
 			color: #000;
 			margin-bottom: 60px;
 		}
@@ -185,12 +185,12 @@
 		margin: 0 auto;
 		// 아직도 after는 모르겠음
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
 		h1 {
-			font: bold 24px/1 "arial";
+			font: bold 24px/1 'arial';
 			color: #fff;
 			padding-top: 5px;
 			float: left;
@@ -199,7 +199,7 @@
 			float: left;
 			margin-left: 70px;
 			address {
-				font: 14px/1.7 "arial";
+				font: 14px/1.7 'arial';
 				color: #eee;
 				margin-bottom: 20px;
 				// margin-top: 20px;
@@ -207,7 +207,7 @@
 				// border-top: 1px solid #888;
 			}
 			p {
-				font: 12px/1 "arial";
+				font: 12px/1 'arial';
 				color: #eee;
 			}
 		} //end of address
@@ -217,13 +217,13 @@
 			float: right;
 			p {
 				&:nth-of-type(1) {
-					font: bold 20px/1 "arial";
+					font: bold 20px/1 'arial';
 					color: orange;
 					margin-bottom: 15px;
 					// display: inline-block;
 				}
 				&:nth-of-type(2) {
-					font: bold 25px/1 "Roboto";
+					font: bold 25px/1 'Roboto';
 					letter-spacing: 7px;
 					color: #fff;
 				}
