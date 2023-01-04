@@ -246,7 +246,67 @@ table {
   background: url(../img/sub_visual_01.jpg) no-repeat center/cover;
   filter: grayscale(90%);
 }
+.biz_introduction .wrap {
+  width: 100%;
+}
+.biz_introduction .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.biz_introduction .wrap article {
+  width: 380px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+.biz_introduction .wrap article:nth-of-type(3n) {
+  margin-right: 0px;
+}
+.biz_introduction .wrap article .pic {
+  width: 100%;
+  height: 380px;
+  border-radius: 50%;
+  overflow: hidden;
+  filter: grayscale(1);
+  margin-bottom: 20px;
+}
+.biz_introduction .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.biz_introduction .wrap article h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.biz_introduction .wrap article h2 a {
+  font: bold 25px/1 "arial";
+  color: #555;
+}
+.biz_introduction .wrap article p {
+  text-align: center;
+  margin-bottom: 50px;
+  font: 16px/1.2 "arial";
+  color: #aaa;
+}
 
+@media screen and (max-width: 1179px) {
+  .biz_introductiot .division {
+    height: 60vw;
+  }
+}
+@media screen and (max-width: 539px) {
+  .biz_introductio .division {
+    background: none;
+    height: auto;
+  }
+  .biz_introductio .division .div_tree {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}
 .complex_info {
   width: 100%;
 }
@@ -380,6 +440,7 @@ table {
   font: bold 18px/1 "arial";
   color: #555;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .join .inner #terms {
   width: 100%;
@@ -389,6 +450,87 @@ table {
   color: #888;
   background: #eee;
   margin-bottom: 20px;
+  resize: none;
+}
+.join .inner .agreement {
+  margin-bottom: 70px;
+}
+.join .inner .agreement label[for=agree] {
+  font-size: 12px;
+}
+.join .inner table {
+  width: 100%;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+.join .inner table th {
+  width: 20%;
+  text-align: left;
+  font: bold 14px/1 "arial";
+  color: #666;
+  padding: 20px 30px;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background: #eee;
+}
+.join .inner table th:last-child {
+  background: #fff;
+  text-align: center;
+  border-right: none;
+}
+.join .inner table th input[type=submit],
+.join .inner table th input[type=reset] {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background: #444;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  margin-right: 10px;
+}
+.join .inner table td {
+  border-bottom: 1px solid #bbb;
+  font-size: 0;
+}
+.join .inner table td input[type=text],
+.join .inner table td input[type=password] {
+  width: 30%;
+  height: 30px;
+  border: 1px solid #bbb;
+  background: #e1d0d4;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.join .inner table td input[type=checkbox],
+.join .inner table td input[type=radio] {
+  margin-right: 5px;
+}
+.join .inner table td label {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.join .inner table td .hobbyTxt,
+.join .inner table td .genderTxt {
+  font: 12px/1 "arial";
+  color: hotpink;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.join .inner table td select#company {
+  width: 20%;
+  height: 30px;
+  border: 1px solid #bbb;
+  background: #e1d0d4;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+.join .inner table td textarea#comments {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #bbb;
+  background: #e1d0d4;
+  padding: 20px;
   resize: none;
 }
 
@@ -487,50 +629,50 @@ table {
 }
 
 @media screen and (max-width: 1179px) {
-  .community .inner table tr th:nth-of-type(1) {
+  .notice .inner table tr th:nth-of-type(1) {
     width: 13%;
   }
-  .community .inner table tr th:nth-of-type(3) {
+  .notice .inner table tr th:nth-of-type(3) {
     width: 20%;
   }
-  .community .inner table tr th:nth-of-type(4) {
+  .notice .inner table tr th:nth-of-type(4) {
     width: 0%;
     display: none;
   }
-  .community .inner table tr td:nth-of-type(4) {
+  .notice .inner table tr td:nth-of-type(4) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(6) {
+  .notice .inner .pagination .numbers a:nth-of-type(6) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(7) {
+  .notice .inner .pagination .numbers a:nth-of-type(7) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(8) {
+  .notice .inner .pagination .numbers a:nth-of-type(8) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(9) {
+  .notice .inner .pagination .numbers a:nth-of-type(9) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(10) {
+  .notice .inner .pagination .numbers a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 539px) {
-  .community .inner table tr th {
+  .notice .inner table tr th {
     font-size: 13px;
   }
-  .community .inner table tr th:nth-of-type(1) {
+  .notice .inner table tr th:nth-of-type(1) {
     width: 0%;
     display: none;
   }
-  .community .inner table tr th:nth-of-type(3) {
+  .notice .inner table tr th:nth-of-type(3) {
     width: 29%;
   }
-  .community .inner table tr td:nth-of-type(1) {
+  .notice .inner table tr td:nth-of-type(1) {
     display: none;
   }
-  .community .inner .pagination .numbers {
+  .notice .inner .pagination .numbers {
     display: none;
   }
 }
