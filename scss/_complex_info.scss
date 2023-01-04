@@ -1,5 +1,9 @@
 .complex_info {
 	width: 100%; //전체너비를 뜻하는 100%
+	.sub_visual {
+		background: url(../img/sub_visual_03.jpg) no-repeat center/cover;
+		filter: grayscale(90%);
+	}
 	#map {
 		width: 100%; //여기map의 100% 1180
 		height: 500px;

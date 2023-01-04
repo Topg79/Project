@@ -1,91 +1,170 @@
-// 분양 정보 자바스크립트
-
+// 분양 정보
 // 플리커 활용 (Shim_Portfolio_202212)
-
 // key : 279900eb1e2399803d846658b1cf7e1d
-
 // https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
-
 // https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-
 // flickr.interestingness.getList
 
-const base = "https://www.flickr.com/services/rest/?";
-const method = "flickr.interestingness.getList";
-const key = "279900eb1e2399803d846658b1cf7e1d";
-const per_page = 500;
-const format = "json";
-const frame = document.querySelector("#list");
+const body = document.querySelector('body');
+const frame = document.querySelector('#list');
+const loading = document.querySelector('.loading');
+const input = document.querySelector('#search');
+const btnSearch = document.querySelector('.btnSearch');
+const base = 'https://www.flickr.com/services/rest/?';
+const method1 = 'flickr.interestingness.getList';
+const method2 = 'flickr.photos.search';
+const key = '279900eb1e2399803d846658b1cf7e1d';
+const per_page = 10;
 
-const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`;
+const url = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
 
-//해당 url값으로 비동기식 데이터 호출
-fetch(url)
-  .then((data) => {
-    // console.log(data);  //가져온 데이터 전체를 보여줌
-    let result = data.json();  //가겨온 데이터 중에서 json(제이슨) 형태의 값으로 변환함
-    // console.log(result); //결과로 만들어진 데이터를 보여준다
-    return result; //해당 결과를 리턴(반환)해줘야 쓸수 있다
-  })
-  .then((json) => {
-    //반환된 값을 json이라는 매개변수로 받은뒤
-    let items = json.photos.photo;  //콘솔에서 본것처럼 그안의 photos안의 photo로 접근함
-    // console.log(items); //500장의 사진이 json 객체배열로 가져와짐
+callData(url);
 
-    let htmls = "";
+btnSearch.addEventListener('click', (e) => {
+	let tag = input.value;
+	tag = tag.trim();
 
-    items.map((el) => {
-      console.log(el);
+	const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
-      // 이미지의 썸네일 url 주소  
-      let imgSrc = ` https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
+	if (tag != '') {
+		callData(url);
+	} else {
+		frame.innerHTML = '';
+		frame.classList.remove('on');
+		frame.style.height = 'auto';
 
-      //큰 이미지 url 주소
-      let imgSrcBig = ` https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
+		const errMsgs = frame.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) frame.parentElement.querySelector('p').remove();
 
-      htmls += `
+		const errMeg = document.createElement('p');
+		errMeg.append('검색어를 쓰지 않았습니다, 검색어를 입력하세요');
+		frame.parentElement.append(errMeg);
+	}
+});
+
+input.addEventListener('keyup', (e) => {
+	if (e.key === 'Enter') {
+		let tag = input.value;
+		tag = tag.trim();
+
+		const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+
+		if (tag != '') {
+			callData(url);
+		} else {
+			frame.innerHTML = '';
+			frame.classList.remove('on');
+			frame.style.height = 'auto';
+
+			const errMsgs = frame.parentElement.querySelectorAll('p');
+			if (errMsgs.length > 0) frame.parentElement.querySelector('p').remove();
+
+			const errMeg = document.createElement('p');
+			errMeg.append('검색어를 쓰지 않았습니다, 검색어를 입력하세요');
+			frame.parentElement.append(errMeg);
+		}
+	}
+});
+frame.addEventListener('click', (e) => {
+	e.preventDefault();
+	if (e.target == frame) return;
+
+	let target = e.target.closest('.item').querySelector('.thumb');
+
+	if (e.target == target) {
+		let imgSrc = target.parentElement.getAttribute('href');
+		let pop = document.createElement('aside');
+		pop.classList.add('pop');
+		let pops = `
+      <div class="con">
+        <img src="${imgSrc}">
+      </div>
+      <span class="close">close</span>
+    `;
+		pop.innerHTML = pops;
+		body.querySelector('#gallery').append(pop);
+		body.style.overflow = 'hidden';
+	}
+});
+
+body.addEventListener('click', (e) => {
+	let pop = body.querySelector('.pop');
+	if (pop != null) {
+		let close = pop.querySelector('.close');
+		if (e.target == close) {
+			pop.remove();
+			body.style.overflow = 'auto';
+		}
+	}
+});
+
+function callData(url) {
+	fetch(url)
+		.then((data) => {
+			return data.json();
+		})
+		.then((json) => {
+			let items = json.photos.photo;
+			createList(items);
+			delayLoading();
+		});
+}
+
+function createList(items) {
+	let htmls = '';
+	items.map((el) => {
+		let imgSrc = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
+		let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
+		htmls += `
         <li class="item">
           <div>
             <a href=${imgSrcBig}>
-              <img src=${imgSrc}>
+              <img src=${imgSrc} class="thumb">
             </a>
             <p>${el.title}</p>
+            <span>
+              <img class="profile" src="http://farm${el.farm}.staticflickr.com/${el.server}/buddyicons/${el.owner}.jpg">
+              <strong>${el.owner}</strong>
+            </span>
           </div>
         </li>
       `;
-    }) //end of map
+	});
+	frame.innerHTML = htmls;
+}
 
-    frame.innerHTML = htmls;
+function delayLoading() {
+	const imgs = frame.querySelectorAll('img');
+	const len = imgs.length;
+	let count = 0;
 
-    //로딩이 다 된것을 확인하는 방법
-    const imgs = frame.querySelectorAll("img");
-    const len = imgs.length;
+	for (let el of imgs) {
+		el.onload = () => {
+			count++;
+			if (count == len) {
+				isoLayout();
+			}
+		};
 
-    let count = 0;
+		// let thumb = el.closest(".item").querySelector(".thumb");//
+		el.onerror = (e) => {
+			e.currentTarget.setAttribute('src', 'img/k1.jpg');
+		};
 
-    for (let el of imgs) {
-      el.addEventListener("load", () => {
-        count++;  //로드할때마다 count를 증가시킨다
+		let profile = el.closest('.item').querySelector('.profile');
+		profile.onerror = (e) => {
+			e.currentTarget.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+		};
+	}
+}
 
-        //로딩이 다 되면
-        if (count == len) {
-          isoLayout();
-        }
-      })
-    }
-
-
-
-  })
-
-//isotope layout 플러그인을 적용시키는 함수 생성
 function isoLayout() {
+	loading.classList.add('off');
+	frame.classList.add('on');
 
-  frame.classList.add("on");
-
-  new Isotope("#list", {
-    itemSelection: ".item",
-    columnWidth: ".item",
-    transitionDuration: "0.5s",
-  });
+	new Isotope('#list', {
+		itemSelection: '.item',
+		columnWidth: '.item',
+		transitionDuration: '0.5s',
+	});
 }
