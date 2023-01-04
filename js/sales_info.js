@@ -146,7 +146,6 @@ function delayLoading() {
 			}
 		};
 
-		// let thumb = el.closest(".item").querySelector(".thumb");//
 		el.onerror = (e) => {
 			e.currentTarget.setAttribute('src', 'img/k1.jpg');
 		};
